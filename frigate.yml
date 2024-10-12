@@ -1,0 +1,33 @@
+mqtt:
+  host: <MQTT_HOST_IP>
+  user: <MQTT_USER>  
+  password: <MQTT_PASSWORD>
+
+cameras:
+  ipad:
+    ffmpeg:
+      inputs:
+        - path: rtsp://<IPAD_CAMERA_RTSP_URL>   # Example: rtsp://10.0.0.45
+          roles:
+            - detect
+            - record
+    detect:
+      width: 1280
+      height: 720
+      fps: 15
+    objects:
+      track:
+        - person
+detectors:
+  cpu1:
+    type: cpu
+  cpu2:
+    type: cpu
+  cpu3:
+    type: cpu
+  cpu4:
+    type: cpu
+  cpu5:
+    type: cpu
+
+version: 0.14
